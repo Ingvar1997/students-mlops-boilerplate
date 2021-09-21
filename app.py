@@ -28,8 +28,8 @@ def hello():
 def run_segmentation():
     if not request.json or not 'im_base64' in request.json:
         return jsonify({'error_msg': 'No image provided'}, 400)
-    request_json = request.json  
-    im_base64 = request_json['im_base64']
+    request_json = request.json # request_json is a dict, containing JSON, received in HTTP POST request
+    im_base64 = request_json['im_base64'] # getting image from request JSON
     im_np = convert_base64_im_to_np(im_base64)
 
     # DO SOME MANIPULATIONS HERE
