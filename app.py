@@ -34,5 +34,5 @@ def run_segmentation():
 
     # DO SOME MANIPULATIONS HERE
 
-    transformed_image = convert_np_im_to_base64(im_np)
+    transformed_image = convert_np_im_to_base64(im_np) # put transformed image in here
     return jsonify({'im_base64': transformed_image}), 200
